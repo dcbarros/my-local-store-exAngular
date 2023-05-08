@@ -1,0 +1,33 @@
+<header class="main-header">
+    <h1 class="main-header__title">
+        <span class="main-header__title--blue">My</span><span class="main-header__title--orange">Local</span><span class="main-header__title--blue">Store</span>
+    </h1>
+    <div class="container-menu">
+        <nav class="main-header__menu">
+            <ul>
+                <li><a href="/produtos">Produtos</a></li>
+                <li>
+                    <a href="/carrinho">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Carrinho
+                        <span class="badge-carrinho">{{ contadorItens() }}</span>
+                    </a>
+                </li>
+                <li><a href="/contato">Contato</a></li>
+                <li>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <form class="search-form" (ngSubmit)="buscar(descricao)">
+            <input type="text" name="descricao" [(ngModel)]="descricao">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+</header>

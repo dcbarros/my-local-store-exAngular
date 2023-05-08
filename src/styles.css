@@ -1,1 +1,132 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos Gerais */
+
+/* Fontes */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    }
+    
+    /* Cores */
+    body {
+    background-color: #f7f7f7;
+    color: #333;
+    }
+    
+    a {
+    color: #007bff;
+    text-decoration: none;
+    }
+    
+    a:hover {
+    text-decoration: underline;
+    }
+    
+    /* Tamanhos */
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+    
+    /* Botões */
+    .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    transition: all 0.3s ease;
+    }
+    
+    .button:hover {
+    background-color: #007bff;
+    color: #fff;
+    }
+    
+    /* Formulários */
+    .form-group {
+    margin-bottom: 20px;
+    }
+    
+    .form-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    }
+    
+    .form-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    }
+    
+    .form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    }
+
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    
+    :root {
+        --orange: #ff7000;
+        --blue: #004a76;
+        --green: #00A200;
+        --dark-blue: #002d47;
+        --gray: rgba(88, 89, 91, 1);
+        --light-gray: rgba(232, 232, 232, 1);    
+        --light-gray-2: rgb(247, 247, 247);
+    }
+    
+    input, textarea, select {
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+        border: 1px solid rgba(0, 74, 124, 0.6);
+        outline: none;
+    }
+    
+    textarea {
+        resize: none;
+    }
+    
+    .error-message {
+        color: red;
+    }
+    
+    .valid {
+        border: 1px solid var(--green);
+    }
+    
+    .invalid {
+        border: 1px solid red;
+    }
+    
+    .invalid:focus {
+        border-color: red;
+    }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

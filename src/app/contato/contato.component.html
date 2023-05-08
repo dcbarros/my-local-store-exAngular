@@ -1,0 +1,56 @@
+<h2 class="contact__title">Entre em contato</h2>
+<section class="contact__container">
+    <form action="" class="contact-form" [formGroup]="formContato">
+        
+        <input 
+        type="text" 
+        placeholder="Digite o seu nome" 
+        formControlName="nome" 
+        [class.valid]="formContato.controls['nome'].valid" 
+        [class.invalid]="formContato.controls['nome'].invalid && formContato.controls['nome'].touched || formContato.controls['nome'].dirty"/>
+        
+        <small class="error-message" *ngIf="formContato.controls['nome'].invalid && formContato.controls['nome'].touched || formContato.controls['nome'].dirty&&formContato.controls['nome'].hasError('minlength')">Campo deve possuir no mínimo 4 caracteres</small>
+        <small class="error-message" *ngIf="formContato.controls['nome'].invalid && formContato.controls['nome'].touched || formContato.controls['nome'].dirty&&formContato.controls['nome'].hasError('required')">Campo obrigatório</small>
+        
+
+        <input type="tel" placeholder="(00) 0 0000-0000" formControlName="telefone"
+        [class.valid]="formContato.controls['telefone'].valid" 
+        [class.invalid]="formContato.controls['telefone'].invalid && formContato.controls['telefone'].touched || formContato.controls['telefone'].dirty"
+        mask='(00) 0 0000-0000'/>
+        
+        <small class="error-message" *ngIf="formContato.controls['telefone'].invalid && formContato.controls['telefone'].touched || formContato.controls['telefone'].dirty&&formContato.controls['telefone'].hasError('minlength')">Campo deve possuir no mínimo 11 caracteres</small>
+        <small class="error-message" *ngIf="formContato.controls['telefone'].invalid && formContato.controls['telefone'].touched || formContato.controls['telefone'].dirty&&formContato.controls['telefone'].hasError('required')">Campo obrigatório</small>
+
+
+        <input type="email" placeholder="Digite o seu email" formControlName="email" 
+        [class.valid]="formContato.controls['email'].valid" 
+        [class.invalid]="formContato.controls['email'].invalid && formContato.controls['email'].touched || formContato.controls['email'].dirty"/>
+
+        <small class="error-message" *ngIf="formContato.controls['email'].invalid && formContato.controls['email'].touched || formContato.controls['email'].dirty&&formContato.controls['email'].hasError('email')">Campo deve ser preenchido com um email válido</small>
+        <small class="error-message" *ngIf="formContato.controls['email'].invalid && formContato.controls['email'].touched || formContato.controls['email'].dirty&&formContato.controls['email'].hasError('required')">Campo obrigatório</small>
+
+        
+        <input type="assunto" placeholder="Digite o titulo" formControlName="assunto" 
+        [class.valid]="formContato.controls['assunto'].valid" 
+        [class.invalid]="formContato.controls['assunto'].invalid && formContato.controls['assunto'].touched || formContato.controls['assunto'].dirty"/>
+
+        <small class="error-message" *ngIf="formContato.controls['assunto'].invalid && formContato.controls['assunto'].touched || formContato.controls['assunto'].dirty&&formContato.controls['assunto'].hasError('minlength')">Campo deve possuir no mínimo 10 caracteres</small>
+        <small class="error-message" *ngIf="formContato.controls['assunto'].invalid && formContato.controls['assunto'].touched || formContato.controls['assunto'].dirty&&formContato.controls['assunto'].hasError('required')">Campo obrigatório</small>
+
+
+        <textarea maxlength="300" placeholder="Digite a sua mensagem!!!" formControlName="mensagem"      
+        [class.valid]="formContato.controls['mensagem'].valid" 
+        [class.invalid]="formContato.controls['mensagem'].invalid && formContato.controls['mensagem'].touched || formContato.controls['mensagem'].dirty"></textarea>
+
+        <small class="error-message" *ngIf="formContato.controls['mensagem'].invalid && formContato.controls['mensagem'].touched || formContato.controls['mensagem'].dirty&&formContato.controls['mensagem'].hasError('minlength')">Campo deve possuir no mínimo 20 caracteres</small>
+        <small class="error-message" *ngIf="formContato.controls['mensagem'].invalid && formContato.controls['mensagem'].touched || formContato.controls['mensagem'].dirty&&formContato.controls['mensagem'].hasError('required')">Campo obrigatório</small>
+
+
+        <button [disabled]="formContato.invalid" (click)="enviarFormulario()">Enviar</button>
+
+    </form>
+    <address>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.720944593528!2d-38.922340924050765!3d-5.3061681532349985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bc6b914cb8cf7d%3A0x31d496fd8b9a8aaf!2sR.%20Juscelino%20Kubitschek%2C%2030%20-%20Centro%2C%20Banabui%C3%BA%20-%20CE%2C%2063960-000!5e0!3m2!1spt-BR!2sbr!4v1682910781026!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>]
+        <p>R. Juscelino Kubitschek, 30 - Centro, Banabuiú - CE, 63960-000</p>
+    </address>
+</section>
